@@ -23,36 +23,37 @@ For the CNN model, the wind speed forecasts of the [ICON-EU model](https://www.d
 Data on wind power generation in Germany were obtained from the ENTSO-E website and can be downloaded [here](https://transparency.entsoe.eu/generation/r2/actualGenerationPerProductionType/show). 
 For the experiments, these wind power measurements were normalized by the installed wind power capacity in Germany, which is available [here](https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show).
 
-## Usage
-Instructions for training the models:
+## Instructions for training the models:
 
-1. LSTM model
-   (1) Perform hyperparameter tuning for the LSTM model using the Jupyter notebook /models/lstm/hyperparameter-tuning_lstm.ipynb.
-   (2) Train the LSTM model with ordinary training using the Jupyter notebook /models/lstm/training_lstm.ipynb and setting the parameter p_adv_training to 0.
-   (3) Train the LSTM model with adversarial training using the Jupyter notebook /models/lstm/training_lstm.ipynb and setting the parameter p_adv_training to 1.
+LSTM model
+1. Perform hyperparameter tuning for the LSTM model using the Jupyter notebook /models/lstm/hyperparameter-tuning_lstm.ipynb.
+2. Train the LSTM model with ordinary training using the Jupyter notebook /models/lstm/training_lstm.ipynb and setting the parameter p_adv_training to 0.
+3. Train the LSTM model with adversarial training using the Jupyter notebook /models/lstm/training_lstm.ipynb and setting the parameter p_adv_training to 1.
 
-2. CNN model
-   (2) Train the CNN model with ordinary training using the Jupyter notebook /models/cnn/training_cnn.ipynb and setting the parameter p_adv_training to 0.
-   (3) Train the CNN model with adversarial training using the Jupyter notebook /models/cnn/training_cnn.ipynb and setting the parameter p_adv_training to 1.
+CNN model
+1. Train the CNN model with ordinary training using the Jupyter notebook /models/cnn/training_cnn.ipynb and setting the parameter p_adv_training to 0.
+2. Train the CNN model with adversarial training using the Jupyter notebook /models/cnn/training_cnn.ipynb and setting the parameter p_adv_training to 1.
 
-Instructions for evaluating the overall robustness of the models:
-1. LSTM model
-   (1) Calculate various metrics to quantify the overall robustness of the model using the Jupyter Notebook /robustness_evaluation/lstm/robustness_evaluation_lstm.ipynb.
-   (2) Display the means and standard deviations of the robustness metrics in tables using the Jupyter Notebook /visualization/lstm/tables_robustness_lstm.ipynb.
+## Instructions for evaluating the overall robustness of the models:
 
-2. CNN model
-   (1) Calculate various metrics to quantify the overall robustness of the model using the Jupyter Notebook /robustness_evaluation/cnn/robustness_evaluation_cnn.ipynb.
-   (2) Display the means and standard deviations of the robustness metrics in tables using the Jupyter Notebook /visualization/cnn/tables_robustness_cnn.ipynb.
-   (3) Visualize the impact of targeted adversarial attacks on the test data samples in the form of a box plot using the Jupyter Notebook /visualization/cnn/visualization_boxplot_cnn.ipynb.
+LSTM model
+1. Calculate various metrics to quantify the overall robustness of the model using the Jupyter Notebook /robustness_evaluation/lstm/robustness_evaluation_lstm.ipynb.
+2. Display the means and standard deviations of the robustness metrics in tables using the Jupyter Notebook /visualization/lstm/tables_robustness_lstm.ipynb.
 
-Instructions for evaluating the impact of targeted adversarial attacks on individual model predictions:
-1. LSTM model
-   (1) Compute various information about the impact of a targeted adversarial attack on a single prediction of the model using the Jupyter notebook /robustness_evaluation/lstm/robustness_example_attack_lstm.ipynb.
-   (2) Visualize the impact of the attack on the prediction and the input data using the Jupyter notebook /visualization/lstm/visualization_example-attack_lstm.ipynb.
+CNN model
+1. Calculate various metrics to quantify the overall robustness of the model using the Jupyter Notebook /robustness_evaluation/cnn/robustness_evaluation_cnn.ipynb.
+2. Display the means and standard deviations of the robustness metrics in tables using the Jupyter Notebook /visualization/cnn/tables_robustness_cnn.ipynb.
+3. Visualize the impact of targeted adversarial attacks on the test data samples in the form of a box plot using the Jupyter Notebook /visualization/cnn/visualization_boxplot_cnn.ipynb.
 
-2. CNN model
-   (1) Compute various information about the impact of a targeted adversarial attack on a single prediction of the model using the Jupyter notebook /robustness_evaluation/cnn/robustness_example_attack_cnn.ipynb.
-   (2) Visualize the impact of the attack on the prediction and the input data using the Jupyter notebook /visualization/cnn/visualization_example-attack_cnn.ipynb.
+## Instructions for evaluating the impact of targeted adversarial attacks on individual model predictions:
+
+LSTM model
+1. Compute various information about the impact of a targeted adversarial attack on a single prediction of the model using the Jupyter notebook /robustness_evaluation/lstm/robustness_example_attack_lstm.ipynb.
+2. Visualize the impact of the attack on the prediction and the input data using the Jupyter notebook /visualization/lstm/visualization_example-attack_lstm.ipynb.
+
+CNN model
+1. Compute various information about the impact of a targeted adversarial attack on a single prediction of the model using the Jupyter notebook /robustness_evaluation/cnn/robustness_example_attack_cnn.ipynb.
+2. Visualize the impact of the attack on the prediction and the input data using the Jupyter notebook /visualization/cnn/visualization_example-attack_cnn.ipynb.
 
 ## License
 
