@@ -1,6 +1,7 @@
 # TAAoWPF
 
 This code package implements various types of adversarial attacks on deep learning models for wind power forecasting from the paper "Targeted Adversarial Attacks on Wind Power Forecasts" by René Heinrich (Fraunhofer IEE, University of Kassel), Stephan Vogt (University of Kassel), Malte Lehna (Fraunhofer IEE, University of Kassel), and Christoph Scholz (Fraunhofer IEE, University of Kassel).
+
 In particular, we studied the vulnerability of two different forecasting models to targeted, semi-targeted, and untargeted adversarial attacks. 
 The first model was a Long Short-Term Memory (LSTM) network for forecasting the power production of individual wind farms. 
 The second model was a Convolutional Neural Network (CNN) for forecasting wind power generation across Germany.
